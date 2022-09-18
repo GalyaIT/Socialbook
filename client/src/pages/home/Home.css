@@ -1,6 +1,18 @@
+/* For mobile phones: */
 .Home{
     position: relative;
     display: grid;
-    grid-template-columns: 18rem auto 18rem;
-    gap:1rem;
+    grid-template-rows: 50rem auto 30rem;    
+    gap:1rem;    
 }
+
+  
+     /* For desktop: */
+  @media only screen and (min-width: 920px) {
+    .Home{   
+      position: relative;
+      display: grid;
+      grid-template-columns: 18rem auto 20rem;
+       height: auto;
+    }
+  }
