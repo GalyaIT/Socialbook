@@ -35,9 +35,9 @@ const FollowersCard = () => {
     // </div>
     <div className="FollowersCard">
         
-      {Followers.slice(0, itemsToShow).map((follower, id) => 
+      {Followers.slice(0, itemsToShow).map((follower, index) => 
      
-            <div className="follower">
+            <div key={index} className="follower">
             <div>
                 <img src={follower.img} alt="" className='followerImage' />
                 <div className="name">
