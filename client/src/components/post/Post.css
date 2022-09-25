@@ -12,7 +12,10 @@
     object-fit: cover;
     border-radius: 0.5rem;
 }
-
+.Post>span:nth-of-type(1){
+    color: var(--gray);
+    font-size: 12px;
+ }
 .postReact{
     display: flex;
     gap: 1.5rem;

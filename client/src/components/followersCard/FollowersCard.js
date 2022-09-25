@@ -34,7 +34,7 @@ const FollowersCard = () => {
     
     // </div>
     <div className="FollowersCard">
-        
+           <h3>Who is following you</h3>
       {Followers.slice(0, itemsToShow).map((follower, index) => 
      
             <div key={index} className="follower">

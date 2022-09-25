@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProfileSide.css';
 import FollowersCard from '../followersCard/FollowersCard';
 import LogoSearch from '../logoSearch/LogoSearch';
 import ProfileCard from '../profileCard/ProfileCard';
