@@ -11,6 +11,6 @@
   @media only screen and (min-width: 920px) {
     .Home{        
       grid-template-columns: 18rem auto 20rem;   
-      /* height: 100vh;    */
+      height: 100vh;   
     }
   }

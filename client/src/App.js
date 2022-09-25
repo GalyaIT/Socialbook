@@ -1,6 +1,7 @@
 import "./App.css"
 // import Home from "../src/pages/home/Home"
-import Profile from "../src/pages/profile/Profile"
+// import Profile from "../src/pages/profile/Profile";
+import Auth from '../src/pages/auth/Auth';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
        <div className="blur" style={{top:'-18%', right:'0'}}></div>
        <div className="blur" style={{top:'36%', left:'-8rem'}}></div>
        {/* <Home/> */}
-       <Profile/>
+       {/* <Profile/> */}
+       <Auth/>
 
     </div>
   );
