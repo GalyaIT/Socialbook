@@ -1,4 +1,4 @@
-.PostShare{
+/* .PostShare{
     display: flex;
     gap:1rem;
     background-color: var(--cardColor);
@@ -59,4 +59,90 @@
     right: 1rem;
     top: 0.5rem;
     cursor: pointer;
+} */
+
+/* For mobile phones: */
+.PostShare {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
 }
+.PostShare div > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+.postShare-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+}
+
+.PostShare > div > input {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+.postOptions {
+  display: flex;
+  justify-content: space-evenly;  
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.option:hover {
+  cursor: pointer;
+}
+.ps-button {
+  padding: 5px 20px 5px 20px;
+  font-size: 12px;
+  width: 20%;
+  height: 30px;
+  align-self: center;
+}
+.previewImage {
+  position: relative;
+}
+.previewImage > img {
+  width: 100%;
+  max-height: 20rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.previewImage > svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+/* For tablet: */
+@media only screen and (min-width: 768px) and(max-width: 960px) {
+  .option {    
+    flex-direction: row; 
+    font-size: 12px;   
+  }
+}
+
+
+    /* For desktop: */
+    @media only screen and (min-width: 1025px) {
+      
+      
+    }

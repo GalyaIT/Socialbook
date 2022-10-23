@@ -6,6 +6,9 @@ import "./ProfileCard.css";
 const ProfileCard = () => {
 
   const ProfilePage=true;
+  
+
+
   return (
     <div className="ProfileCard">
       <div className="ProfileImages">

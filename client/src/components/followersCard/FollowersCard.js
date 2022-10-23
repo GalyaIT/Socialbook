@@ -48,11 +48,10 @@ const FollowersCard = () => {
             <button className='button fc-button'>
                 Follow
             </button>            
-        </div>       
-        
-       
-        
+        </div>     
+ 
       )} 
+      
      {(itemsToShow === 3) ? <button className="button sh-button"onClick={showmore}>Show More</button>: <button className="button sh-button" onClick={showless}>Show Less</button>}
     </div>
   );

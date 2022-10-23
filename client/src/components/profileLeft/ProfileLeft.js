@@ -1,8 +1,8 @@
 import React from 'react';
-import '../profileSide/ProfileSide';
-import LogoSearch from '../logoSearch/LogoSearch';
-import FollowersCard from '../followersCard/FollowersCard';
-import InfoCard from '../infoCard/InfoCard';
+import '../ProfileSide/ProfileSide';
+import LogoSearch from '../LogoSearch/LogoSearch';
+import FollowersCard from '../FollowersCard/FollowersCard';
+import InfoCard from '../InfoCard/InfoCard';
 
 
 const ProfileLeft = () => {

@@ -27,7 +27,7 @@ const SignUp = () => {
                   type="text"
                   className="infoInput"
                   name="username"
-                  placeholder="Usernames"
+                  placeholder="Username"
                 />
               </div>
       

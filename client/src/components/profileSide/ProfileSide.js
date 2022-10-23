@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProfileSide.css';
-import FollowersCard from '../followersCard/FollowersCard';
-import LogoSearch from '../logoSearch/LogoSearch';
-import ProfileCard from '../profileCard/ProfileCard';
+import FollowersCard from '../FollowersCard/FollowersCard';
+import LogoSearch from '../LogoSearch/LogoSearch';
+import ProfileCard from '../ProfileCard/ProfileCard';
 
 import './ProfileSide.css';
 

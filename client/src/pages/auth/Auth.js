@@ -1,8 +1,8 @@
 import React from "react";
 import "./Auth.css";
-import LogIn from '../../components/logIn/LogIn';
+import LogIn from '../../components/LogIn/LogIn';
 import Logo from "../../img/logo.png";
-import SignUp from "../../components/signUp/SignUp";
+import SignUp from "../../components/SignUp/SignUp";
 const Auth = () => {
   return (
     <div className="Auth">
