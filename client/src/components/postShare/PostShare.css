@@ -1,66 +1,3 @@
-/* .PostShare{
-    display: flex;
-    gap:1rem;
-    background-color: var(--cardColor);
-    padding: 1rem;
-    border-radius: 1rem;
-}
-.PostShare>img{
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-}
-
-.PostShare>div{
-   display: flex;
-   flex-direction: column;
-   width: 90%;
-   gap: 1rem;
-}
-.PostShare>div>input{
-    background-color: var(--inputColor);
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    outline: none;
- }
-
-.postOptions{
-    display: flex;
-    justify-content: space-around;
-}
-.option{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px 5px 10px;
-    border-radius: 10px;
-    font-size: 12px;
-}
-.option:hover{
-    cursor: pointer;
-}
-.ps-button{
-    padding: 5px 20px 5px 20px;
-    font-size: 12px;
-}
-.previewImage{
-    position: relative;
-}
-.previewImage>img{
-    width: 100%;
-    max-height: 20rem;
-    border-radius: 0.5rem;
-    object-fit: cover;
-}
-.previewImage>svg{
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    cursor: pointer;
-} */
-
 /* For mobile phones: */
 .PostShare {
   display: flex;
@@ -86,7 +23,7 @@
   background-color: var(--inputColor);
   border-radius: 10px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 12px;
   border: none;
   outline: none;
   width: 90%;
@@ -94,15 +31,15 @@
 
 .postOptions {
   display: flex;
-  justify-content: space-evenly;  
+  justify-content: space-around;  
+  gap:2px;
 }
 
 .option {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 5px;
+  justify-content: center; 
   border-radius: 10px;
   font-size: 10px;
 }
@@ -110,11 +47,11 @@
   cursor: pointer;
 }
 .ps-button {
-  padding: 5px 20px 5px 20px;
-  font-size: 12px;
-  width: 20%;
-  height: 30px;
-  align-self: center;
+  padding: 0 10px 0 10px;
+  font-size: 10px;
+  width: 22%;
+  height: 24px;
+  align-self: center;  
 }
 .previewImage {
   position: relative;
@@ -133,16 +70,43 @@
 }
 
 /* For tablet: */
-@media only screen and (min-width: 768px) and(max-width: 960px) {
+@media only screen and (min-width: 768px) {
+
+  .PostShare > div > input {       
+    font-size: 17px;        
+  }
+  .postOptions {        
+    justify-content: space-around;  
+  }
   .option {    
-    flex-direction: row; 
-    font-size: 12px;   
+    padding: 5px; 
+    font-size: 12px;
+  }
+  .ps-button {
+    padding: 5px 20px 5px 20px;
+    font-size: 12px;
+    width: 20%;
+    height: 30px;       
   }
 }
 
 
     /* For desktop: */
-    @media only screen and (min-width: 1025px) {
-      
-      
+    @media only screen and (min-width: 960px) {
+      .PostShare > div > input {       
+        font-size: 17px;        
+      }
+      .postOptions {        
+        justify-content: space-around;  
+      }
+      .option {        
+        padding: 5px; 
+        font-size: 12px;
+      }
+      .ps-button {
+        padding: 5px 20px 5px 20px;
+        font-size: 12px;
+        width: 20%;
+        height: 30px;       
+      }
     }

@@ -1,7 +1,6 @@
 .Profile{
     position: relative;
-    display: flex;
-    /* grid-template-rows: 20% auto 30%;     */
+    display: flex;   
     flex-direction: column;
     gap:1rem;    
 }
@@ -13,9 +12,7 @@
 
      /* For desktop: */
   @media only screen and (min-width: 960px) {
-    .Profile{       
-      /* grid-template-columns: 16rem auto 16rem;  
-      height: 200vh; */
+    .Profile{           
       flex-direction: row;
       justify-content: center;
       gap:1rem;      

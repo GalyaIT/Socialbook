@@ -1,9 +1,9 @@
 /* For mobile phones: */
-.Home{
+.Home{  
     position: relative;
-    display: grid;
-    grid-template-rows: 50rem auto 50rem;    
-    gap:1rem;    
+    display: flex;   
+    flex-direction: column;
+    gap:2rem;    
 }
 
 /* For tablet: */
@@ -12,9 +12,10 @@
 }
   
      /* For desktop: */
-  @media only screen and (min-width: 920px) {
-    .Home{        
-      grid-template-columns: 18rem auto 20rem;   
-      height: 100vh;   
+  @media only screen and (min-width: 960px) {
+    .Home{     
+      flex-direction: row;
+      justify-content: center;
+      gap:1rem;      
     }
   }
