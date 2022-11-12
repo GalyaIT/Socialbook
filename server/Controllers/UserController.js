@@ -1,6 +1,7 @@
 import UserModel from "../Models/userModel.js";
 import bcrypt from "bcrypt";
 
+
 //get a user
 
 export const getUser = async (req, res) => {
@@ -50,7 +51,7 @@ export const deleteUser = async (req, res) => {
   const { currentUserId, currentUserAdminStatus } = req.body;
 
   if (id === currentUserId || currentUserAdminStatus) {
-    try {
+    try {    
       await UserModel.findOneAndDelete(id);
       res.status(200).json("User deleted successfully");
     } catch (error) {
@@ -60,6 +61,10 @@ export const deleteUser = async (req, res) => {
     res.status(403).json("Access Denied!");
   }
 };
+
+
+
+
 //Follow a user
 
 export const followUser = async (req, res) => {
@@ -75,7 +80,7 @@ export const followUser = async (req, res) => {
 
       if(!followUser.followers.includes(currentUserId)){
         await followUser.updateOne({$push:{followers:currentUserId}})
-        await followingUser.updateOne({$push:{followings:id}})
+        await followingUser.updateOne({$push:{following:id}})
         res.status(200).json("User followed!")
       }
       else{
@@ -103,7 +108,7 @@ export const unFollowUser = async (req, res) => {
 
       if(followUser.followers.includes(currentUserId)){
         await followUser.updateOne({$pull:{followers:currentUserId}})
-        await followingUser.updateOne({$pull:{followings:id}})
+        await followingUser.updateOne({$pull:{following:id}})
         res.status(200).json("User unfollowed!")
       }
       else{
