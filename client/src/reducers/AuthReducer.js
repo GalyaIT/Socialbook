@@ -1,4 +1,4 @@
-const authReducer = (
+const AuthReducer = (
   state = { authData: null, loading: false, error: false },
   action
 ) => {
@@ -15,4 +15,4 @@ const authReducer = (
       return state;
   }
 };
-export default authReducer;
+export default AuthReducer;
