@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Post.css';
 import Comment from '../../img/comment.png'
 import Share from '../../img/share.png'
@@ -7,8 +7,8 @@ import NotLike from '../../img/notlike.png'
 import { useSelector } from 'react-redux';
 
 const Post = ({data}) => {
-  const {user}=useSelector((state)=>state.authReducer.authData);
-  console.log(user);
+  const {user}=useSelector((state)=>state.authReducer.authData); 
+ 
   return (
    <div className="Post">
     <img src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
@@ -24,7 +24,7 @@ const Post = ({data}) => {
 
     <div className="details">
       <span><b>{data.name}</b></span>
-      <span>&nbsp;{data.desc}</span>
+      <span>&nbsp;{data.description}</span>
     </div>
 
    </div>
