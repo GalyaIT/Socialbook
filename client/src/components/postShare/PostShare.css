@@ -7,7 +7,7 @@
   padding: 1rem;
   border-radius: 1rem;
 }
-.PostShare div > img {
+.PostShare > div > img {
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -31,15 +31,15 @@
 
 .postOptions {
   display: flex;
-  justify-content: space-around;  
-  gap:2px;
+  justify-content: space-around;
+  gap: 2px;
 }
 
 .option {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   border-radius: 10px;
   font-size: 10px;
 }
@@ -51,7 +51,7 @@
   font-size: 10px;
   width: 22%;
   height: 24px;
-  align-self: center;  
+  align-self: center;
 }
 .previewImage {
   position: relative;
@@ -71,42 +71,40 @@
 
 /* For tablet: */
 @media only screen and (min-width: 768px) {
-
-  .PostShare > div > input {       
-    font-size: 17px;        
+  .PostShare > div > input {
+    font-size: 17px;
   }
-  .postOptions {        
-    justify-content: space-around;  
+  .postOptions {
+    justify-content: space-around;
   }
-  .option {    
-    padding: 5px; 
+  .option {
+    padding: 5px;
     font-size: 12px;
   }
   .ps-button {
     padding: 5px 20px 5px 20px;
     font-size: 12px;
     width: 20%;
-    height: 30px;       
+    height: 30px;
   }
 }
 
-
-    /* For desktop: */
-    @media only screen and (min-width: 960px) {
-      .PostShare > div > input {       
-        font-size: 17px;        
-      }
-      .postOptions {        
-        justify-content: space-around;  
-      }
-      .option {        
-        padding: 5px; 
-        font-size: 12px;
-      }
-      .ps-button {
-        padding: 5px 20px 5px 20px;
-        font-size: 12px;
-        width: 20%;
-        height: 30px;       
-      }
-    }
+/* For desktop: */
+@media only screen and (min-width: 960px) {
+  .PostShare > div > input {
+    font-size: 17px;
+  }
+  .postOptions {
+    justify-content: space-around;
+  }
+  .option {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .ps-button {
+    padding: 5px 20px 5px 20px;
+    font-size: 12px;
+    width: 20%;
+    height: 30px;
+  }
+}
