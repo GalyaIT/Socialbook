@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import "./PostShare.css";
-import ProfileImage from "../../img/profileImg.jpg";
+import defaultProfile from "../../img/defaultProfile.png";
 import {
   UilScenery,
   UilPlayCircle,
@@ -81,7 +81,7 @@ const PostShare = () => {
   return (
     <div className="PostShare">
       <div className="postShare-title">
-        <img src={ProfileImage} alt="profileImage" />
+        <img src={defaultProfile} alt="profileImage" />
         <input
           ref={desc}
           required
