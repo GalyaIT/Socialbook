@@ -14,7 +14,6 @@ useEffect(()=>{
   dispatch(getTimelinePosts(user._id));
 },[]);
 
-
   return (
     <div className="Posts">
       {loading? "Fetching posts..." :

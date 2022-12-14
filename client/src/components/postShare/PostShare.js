@@ -17,17 +17,14 @@ const PostShare = () => {
   const imageRef = useRef();
   const desc = useRef();
   const { user } = useSelector((state) => state.authReducer.authData);
-  const loading = useSelector((state) => state.postReducer.uploading);
-  // const [image, setImage] = useState(null);
+  const loading = useSelector((state) => state.postReducer.uploading);  
   const [image, setImage] = useState("");
 
   const onImageChange = async (event) => {
     if (event.target.files && event.target.files[0]) {
-      let img = event.target.files[0];
-      // setImage(img);
+      let img = event.target.files[0];    
       const base64 = await convertBase64(img);
-      setImage(base64);
-      console.log(base64)
+      setImage(base64);      
     }
   };
 
@@ -54,8 +51,7 @@ const PostShare = () => {
       //   console.log(error);
       // }
     // }
-    dispatch(uploadPost(newPost));
-    console.log(newPost)
+    dispatch(uploadPost(newPost));   
     reset();
   };
   const reset = () => {
