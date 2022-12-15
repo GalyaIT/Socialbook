@@ -12,15 +12,12 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
   const [coverImage, setCoverImage] = useState(other.profilePicture);
   const dispatch = useDispatch();
   const params = useParams();
-  const { user } = useSelector((state) => state.authReducer.authData);
-  console.log(other);
-
-  
-
+  const { user } = useSelector((state) => state.authReducer.authData);  
+  formData.profilePicture = profileImage;
+  formData.coverPicture = coverImage;
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    
+    setFormData({ ...formData, [e.target.name]: e.target.value });    
   };
   
   const onImageChange = async (event) => {
@@ -50,9 +47,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    formData.profilePicture = profileImage;
-    formData.coverPicture = coverImage;
+    e.preventDefault();   
     let UserData = formData;    
     dispatch(updateUser(params.id, UserData));
     setModalOpened(false);
