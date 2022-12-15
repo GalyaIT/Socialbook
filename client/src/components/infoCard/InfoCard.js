@@ -50,6 +50,7 @@ const InfoCard = () => {
           <ProfileModal
             modalOpened={modalOpened}
             setModalOpened={setModalOpened}
+            data={user}
           />
         </div>):"" }        
       </div>
