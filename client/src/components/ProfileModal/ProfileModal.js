@@ -5,11 +5,12 @@ import { useParams } from "react-router-dom";
 import { updateUser } from "../../actions/UserAction";
 
 function ProfileModal({ modalOpened, setModalOpened, data }) {
+  console.log(data)
   const theme = useMantineTheme();
   const { password, ...other } = data;
   const [formData, setFormData] = useState(other);
   const [profileImage, setProfileImage] = useState(other.profilePicture);
-  const [coverImage, setCoverImage] = useState(other.profilePicture);
+  const [coverImage, setCoverImage] = useState(other.coverPicture);
   const dispatch = useDispatch();
   const params = useParams();
   const { user } = useSelector((state) => state.authReducer.authData);  

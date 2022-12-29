@@ -10,21 +10,7 @@ const Profile = () => {
   const size = useWindowSize();
 
   return (
-    // <div className="Profile">
-
-    //   <ProfileLeft />
-    //   <div className="Profile-center">
-    //     <ProfileCard />
-    //     <PostSide />
-    //   </div>
-    //   <RightSide />
-    // </div>
-
-    // this.props.hasImage ? <MyImage /> : <SomeotherElement>
-
-    /* <div>
-      {size.width}px / {size.height}px
-    </div> */
+   
     <div>
       {size.width > 960 ? (
         <div className="Profile">
@@ -37,7 +23,7 @@ const Profile = () => {
         </div>
       ) : (
         <div className="Profile">         
-          <ProfileCard />
+          <ProfileCard location ="profilePage"/>
           <ProfileLeft />
           <div className="Profile-center">            
             <PostSide />

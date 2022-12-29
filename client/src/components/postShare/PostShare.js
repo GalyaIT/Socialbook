@@ -77,7 +77,7 @@ const PostShare = () => {
   return (
     <div className="PostShare">
       <div className="postShare-title">
-        <img src={defaultProfile} alt="profileImage" />
+        <img src={user.profilePicture? user.profilePicture : defaultProfile} alt="profileImage" />
         <input
           ref={desc}
           required

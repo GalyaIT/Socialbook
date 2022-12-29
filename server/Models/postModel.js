@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema } from 'mongoose'
 
 
 const PostSchema = mongoose.Schema(
     {
-        userId: {
-            type:String,
+        author: {
+            type: Schema.Types.ObjectId, ref: 'User' ,
             required: true
         },
         description: String,

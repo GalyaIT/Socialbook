@@ -1,59 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./FollowersCard.css";
-import { Followers } from "../../Data/FollowersData";
+import User from '../User/User.js'
+import { useSelector } from "react-redux";
+import { getAllUsers } from "../../api/UserRequests";
 
 const FollowersCard = () => {
-    const [itemsToShow, setItemsToShow] = useState(3);
-
-    const showmore = () => {
-        setItemsToShow(Followers.length)
-    }
-
-    const showless = () => {
-        setItemsToShow(3)
-    }
+  const [persons, setPersons]=useState([]);
+  const {user}=useSelector((state)=>state.authReducer.authData);
+    
+    useEffect(()=>{
+      const fetchPersons=async()=>{
+        let {data} = await getAllUsers();        
+        setPersons(data);
+      };
+      fetchPersons()
+    }, []);
 
   return (
-    // <div className="FollowersCard">
-    //   {Followers.map((follower, id) => {
-    //     return (
-    //         <div className="follower">
-    //         <div>
-    //             <img src={follower.img} alt="" className='followerImage' />
-    //             <div className="name">
-    //                 <span>{follower.name}</span>
-    //                 <span>@{follower.username}</span>
-    //             </div>
-    //         </div>
-    //         <button className='button fc-button'>
-    //             Follow
-    //         </button>
-    //     </div>
-    //     );
-    //   })} 
-    
-    // </div>
     <div className="FollowersCard">
-           <h3>Who is following you</h3>
-      {Followers.slice(0, itemsToShow).map((follower, index) => 
-     
-            <div key={index} className="follower">
-            <div>
-                <img src={follower.img} alt="" className='followerImage' />
-                <div className="name">
-                    <span>{follower.name}</span>
-                    <span>@{follower.username}</span>
-                </div>
-            </div>
-            <button className='button fc-button'>
-                Follow
-            </button>            
-        </div>     
- 
-      )} 
-      
-     {(itemsToShow === 3) ? <button className="button sh-button"onClick={showmore}>Show More</button>: <button className="button sh-button" onClick={showless}>Show Less</button>}
-    </div>
+        <h3>People you may know</h3>
+        {persons.map((person, id) => {
+        if (person._id !== user._id) return <User person={person} key={id} />;
+      })}    
+    </div>    
   );
 };
 
