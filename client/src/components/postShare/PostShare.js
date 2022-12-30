@@ -32,6 +32,7 @@ const PostShare = () => {
     e.preventDefault();
     const newPost = {
       userId: user._id,
+      author:`${user.firstname} ${user.lastname}`,
       description: desc.current.value,
       image:image
     };

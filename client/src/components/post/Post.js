@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const [liked, setLiked] = useState(data.likes.includes(user._id));
   const [likes, setLikes] = useState(data.likes.length);
-  const name = `${user.firstname} ${user.lastname}`;
+  
 
   const handleLike = async () => {
     likePost(data._id, user._id);
@@ -33,7 +33,7 @@ const Post = ({ data }) => {
       <span>{likes} likes</span>
 
       <div className="details">
-        <span >{name}</span>
+        <span >{data.author}</span>
         <span>{data.description}</span>
       </div>
     </div>

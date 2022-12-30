@@ -11,8 +11,6 @@ const dispatch = useDispatch();
 const {user}=useSelector((state)=>state.authReducer.authData);
 let {posts, loading}= useSelector((state)=>state.postReducer);
 const params = useParams();
-console.log(params);
-console.log(params.id);
 
 useEffect(()=>{
   dispatch(getTimelinePosts(user._id));
