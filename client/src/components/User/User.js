@@ -9,7 +9,7 @@ const User = ({ person }) => {
   const [following, setFollowing] = useState(
     person.followers.includes(user._id)
   );
-
+console.log(person);
   const handleFollow = () => {
     following
       ? dispatch(unfollowUser(person._id, user))

@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const [liked, setLiked] = useState(data.likes.includes(user._id));
   const [likes, setLikes] = useState(data.likes.length);
-  
+
 
   const handleLike = async () => {
     likePost(data._id, user._id);
@@ -21,6 +21,7 @@ const Post = ({ data }) => {
 
   return (
     <div className="Post">
+      
       {/* <img src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
         alt="" /> */}
 
@@ -35,6 +36,7 @@ const Post = ({ data }) => {
       <div className="details">
         <span >{data.author}</span>
         <span>{data.description}</span>
+        <span>{data.createdAt}</span>
       </div>
     </div>
   );
