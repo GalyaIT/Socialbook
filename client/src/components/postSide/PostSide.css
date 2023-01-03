@@ -8,7 +8,8 @@
 /* For tablet: */
 @media only screen and (min-width: 768px) {
     .PostSide{       
-        height: 100vh;        
+        height: 100vh; 
+        width: 40rem;       
     }
   
   }
