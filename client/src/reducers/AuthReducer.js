@@ -1,27 +1,29 @@
+import { AUTH_START, AUTH_SUCCESS, AUTH_FAIL, LOG_OUT, UPDATING_START, UPDATING_SUCCESS, UPDATING_FAIL, FOLLOW_USER, UNFOLLOW_USER } from '../constants/actionTypes';
+
 const AuthReducer = (
   state = { authData: null, loading: false, error: false },
   action
 ) => {
   switch (action.type) {
-    case "AUTH_START":
+    case AUTH_START:
       return { ...state, loading: true, error: false };
-    case "AUTH_SUCCESS":
+    case AUTH_SUCCESS:
       localStorage.setItem("profile", JSON.stringify({ ...action?.data }));
       return { ...state, authData: action.data, loading: false, error: false };
 
-    case "AUTH_FAIL":
+    case AUTH_FAIL:
       return { ...state, loading: false, error: true };
 
-      case "UPDATING_START":
+      case UPDATING_START:
         return {...state, updateLoading: true , error: false}
-      case "UPDATING_SUCCESS":
+      case UPDATING_SUCCESS:
         localStorage.setItem("profile", JSON.stringify({...action?.data}));
         return {...state, authData: action.data, updateLoading: false, error: false}
           
-        case "UPDATING_FAIL":
+        case UPDATING_FAIL:
         return {...state, updateLoading: true, error: true}
        
-    case "LOG_OUT":
+    case LOG_OUT:
       localStorage.clear();
       return {
         ...state,
@@ -30,9 +32,9 @@ const AuthReducer = (
         error: false,        
       };
 
-      case "FOLLOW_USER":
+      case FOLLOW_USER:
       return {...state, authData: {...state.authData, user: {...state.authData.user, following: [...state.authData.user.following, action.data]} }}
-      case "UNFOLLOW_USER":
+      case UNFOLLOW_USER:
         return {...state, authData: {...state.authData, user: {...state.authData.user, following: [...state.authData.user.following.filter((personId)=>personId!==action.data)]} }}
       default:
       return state;

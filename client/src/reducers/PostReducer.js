@@ -1,3 +1,5 @@
+import { RETREIVING_START, RETREIVING_SUCCESS, RETREIVING_FAIL } from '../constants/actionTypes';
+
 const PostReducer = (
   state = { posts: null, loading: false, error: false, uploading: false },
   action
@@ -14,11 +16,11 @@ const PostReducer = (
     //   };
     // case "UPLOAD_FAIL":
     //   return { ...state, uploading: false, error: true };
-    case "RETREIVING_START":
+    case RETREIVING_START:
       return { ...state, loading: true, error: false };
-    case "RETREIVING_SUCCESS":
+    case RETREIVING_SUCCESS:
       return { ...state, posts: action.data, loading: false, error: false };
-    case "RETREIVING_FAIL":
+    case RETREIVING_FAIL:
       return { ...state, loading: false, error: true };
    
     default:
